@@ -1,0 +1,42 @@
+name: amanah_project
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.10.8
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supabase_flutter: ^2.12.0
+  image_picker: ^1.2.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  url_launcher: ^6.3.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts1/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts1/Inter_24pt-Medium.ttf
+          weight: 500
+        - asset: assets/fonts1/Inter_24pt-SemiBold.ttf
+          weight: 600
+
+    - family: ArefRuqaa
+      fonts:
+        - asset: assets/fonts1/ArefRuqaa-Regular.ttf
+          weight: 400
+        - asset: assets/fonts1/ArefRuqaa-Bold.ttf
+          weight: 700
