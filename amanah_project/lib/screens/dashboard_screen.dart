@@ -224,7 +224,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                   const SizedBox(height: 16),
 
-                  // ✅ Stats grid
+                 
                   GridView.count(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
@@ -258,7 +258,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
                   const SizedBox(height: 12),
 
-                  // ✅ My summary card (wow)
+                  
                   Card(
                     child: Padding(
                       padding: const EdgeInsets.all(16),
@@ -286,7 +286,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             ],
                           ),
                           const SizedBox(height: 12),
-                          // progress bar بسيط
+                        
                           ClipRRect(
                             borderRadius: BorderRadius.circular(999),
                             child: LinearProgressIndicator(
@@ -311,7 +311,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
                   const SizedBox(height: 14),
 
-                  // ✅ Recent
+               
                   Row(
                     children: [
                       const Text(

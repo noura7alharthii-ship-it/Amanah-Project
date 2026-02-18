@@ -18,7 +18,7 @@ class PostService {
   static Future<String?> uploadImage({
     required Uint8List bytes,
     required String fileName,
-    required String ext, // jpg/png/webp
+    required String ext, 
   }) async {
     final user = _client.auth.currentUser;
     if (user == null) throw 'You must be logged in';
@@ -44,7 +44,7 @@ class PostService {
     required String description,
     required String location,
     String? imageUrl,
-    required String contactEmail, // ✅ يدوي
+    required String contactEmail, 
   }) async {
     final user = _client.auth.currentUser;
     if (user == null) throw 'You must be logged in';
@@ -57,7 +57,7 @@ class PostService {
       'location': location.trim(),
       'image_url': imageUrl,
       'user_id': user.id,
-      'contact_email': contact .trim(), // ✅
+      'contact_email': contact .trim(), 
       'status': 'open',
     });
   }
@@ -65,7 +65,7 @@ class PostService {
   static Future<List<PostModel>> getPosts({required String type}) async {
     final data = await _client
         .from(tableName)
-        // ✅ صريح عشان ما يضيع عمود الكونتاكت
+        
         .select('id,user_id,title,description,location,type,status,image_url,contact_email,created_at')
         .eq('type', type)
         .order('created_at', ascending: false);
@@ -76,7 +76,7 @@ class PostService {
 
   static Future<void> setPostStatus({
     required String postId,
-    required String status, // 'open' | 'resolved'
+    required String status, 
   }) async {
     final user = _client.auth.currentUser;
     if (user == null) throw 'You must be logged in';
@@ -90,10 +90,10 @@ class PostService {
   }) async {
     final client = Supabase.instance.client;
 
-    // 1) delete DB
+    
     await client.from(tableName).delete().eq('id', postId);
 
-    // 2) delete image (optional)
+    
     if (imageUrl != null && imageUrl.trim().isNotEmpty) {
       try {
         final url = imageUrl.trim();
@@ -116,7 +116,7 @@ class PostService {
       } catch (_) {}
     }
   }
-    // ✅ Recent posts (all types)
+    
   static Future<List<PostModel>> getRecentPosts({int limit = 5}) async {
     final data = await _client
         .from(tableName)
@@ -128,7 +128,7 @@ class PostService {
     return list.map(PostModel.fromJson).toList();
   }
 
-  // ✅ My posts (current user)
+  
   static Future<List<PostModel>> getMyPosts({int limit = 12}) async {
     final user = _client.auth.currentUser;
     if (user == null) throw 'You must be logged in';
@@ -144,7 +144,7 @@ class PostService {
     return list.map(PostModel.fromJson).toList();
   }
 
-  // ✅ Stats for dashboard (fetch limited then count in app - stable & simple)
+  
   static Future<Map<String, int>> getDashboardStats({int sampleLimit = 300}) async {
     final user = _client.auth.currentUser;
     if (user == null) throw 'You must be logged in';

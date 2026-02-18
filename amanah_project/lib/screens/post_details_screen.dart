@@ -15,7 +15,7 @@ class PostDetailsScreen extends StatelessWidget {
   bool _isEmail(String s) => RegExp(r'^[^@]+@[^@]+\.[^@]+$').hasMatch(s.trim());
 
   String _cleanPhone(String s) {
-    // removes spaces, keeps + and digits
+    
     return s.trim().replaceAll(' ', '');
   }
 
@@ -58,7 +58,7 @@ class PostDetailsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header
+              
               Row(
                 children: [
                   const AmanahLogo(size: 30),
@@ -72,7 +72,6 @@ class PostDetailsScreen extends StatelessWidget {
               ),
               const SizedBox(height: 14),
 
-              // Image
               if (imageUrl != null && imageUrl.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 16),
@@ -113,7 +112,7 @@ class PostDetailsScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
 
-              // Chips + Status badge
+              
               Wrap(
                 spacing: 10,
                 runSpacing: 10,
@@ -131,7 +130,7 @@ class PostDetailsScreen extends StatelessWidget {
 
               const SizedBox(height: 16),
 
-              // Description
+             
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(18),
@@ -147,7 +146,7 @@ class PostDetailsScreen extends StatelessWidget {
 
               const SizedBox(height: 12),
 
-              // Contact section
+              
               if (hasContact)
                 Card(
                   child: Padding(
@@ -171,7 +170,7 @@ class PostDetailsScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 12),
 
-                        // Action buttons
+                        
                         Row(
                           children: [
                             Expanded(
@@ -213,7 +212,6 @@ class PostDetailsScreen extends StatelessWidget {
                           ],
                         ),
 
-                        // WhatsApp (only for phone)
                         if (!isEmail) ...[
                           const SizedBox(height: 10),
                           SizedBox(
@@ -274,7 +272,7 @@ class PostDetailsScreen extends StatelessWidget {
 
               const Spacer(),
 
-              // Delete (Owner only)
+             
               if (isOwner)
                 SizedBox(
                   width: double.infinity,
@@ -374,7 +372,7 @@ class _Chip extends StatelessWidget {
 }
 
 class _StatusChip extends StatelessWidget {
-  final String status; // open | resolved
+  final String status; 
   const _StatusChip({required this.status});
 
   @override

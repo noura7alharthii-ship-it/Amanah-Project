@@ -40,7 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// Header
+              
               Row(
                 children: [
                   const AmanahLogo(size: 30),
@@ -53,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               const SizedBox(height: 24),
 
-              /// User Info Card
+              
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(20),

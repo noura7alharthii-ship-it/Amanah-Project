@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   
-  static const navy = Color(0xFFC98271);     // copper (Primary)
-  static const sand = Color(0xFF67724A);     // olive  (Secondary)
-  static const offWhite = Color(0xFFF6F1EA); // cream background
-  static const surface = Color(0xFFFFFFFF); // cards / surfaces
+  static const navy = Color(0xFFC98271);     
+  static const sand = Color(0xFF67724A);    
+  static const offWhite = Color(0xFFF6F1EA); 
+  static const surface = Color(0xFFFFFFFF); 
   static const mutedText = Color(0xFF6B6663);
   static const border = Color(0xFFE8E0D8);
 
-  static const text = Color(0xFF3E3A39);     // main text
+  static const text = Color(0xFF3E3A39);    
 }
 
 class AppTheme {

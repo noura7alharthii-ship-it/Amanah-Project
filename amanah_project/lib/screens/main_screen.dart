@@ -20,7 +20,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _tab = 0; // 0 = Lost, 1 = Found
+  int _tab = 0; 
   final _search = TextEditingController();
 
   @override
@@ -46,7 +46,7 @@ class _MainScreenState extends State<MainScreen> {
       }).toList();
     }
 
-    // ✅ open فوق و resolved تحت
+    
     filtered.sort((a, b) {
       final sa = (a.status ?? 'open');
       final sb = (b.status ?? 'open');
@@ -58,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
     return filtered;
   }
 
-  /// Small badge (Lost/Found)
+  
   Widget _badge(String type) {
     final isLost = type == 'lost';
     final bg = isLost ? AppColors.navy.withAlpha(20) : AppColors.sand.withAlpha(64);
@@ -92,7 +92,7 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  /// Status badge (Open/Resolved)
+ 
   Widget _statusBadge(String status) {
     final isResolved = status == 'resolved';
     final bg = isResolved ? Colors.green.withAlpha(24) : AppColors.navy.withAlpha(14);
@@ -116,7 +116,7 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  // ✅ صورة الكارد (كبيرة وواضحة)
+  
   Widget _imageHeader(PostModel p) {
     final url = p.imageUrl;
     final has = url != null && url.isNotEmpty;
@@ -197,7 +197,7 @@ class _MainScreenState extends State<MainScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Title + badges
+             
                   Row(
                     children: [
                       Expanded(
@@ -224,7 +224,7 @@ class _MainScreenState extends State<MainScreen> {
 
                   const SizedBox(height: 10),
 
-                  // Location
+                 
                   Row(
                     children: [
                       const Icon(Icons.location_on_outlined,
@@ -247,7 +247,7 @@ class _MainScreenState extends State<MainScreen> {
 
                   const SizedBox(height: 10),
 
-                  // Description preview
+                  
                   Text(
                     p.description,
                     maxLines: 2,
@@ -278,7 +278,7 @@ class _MainScreenState extends State<MainScreen> {
             const AmanahLogo(size: 34),
             const Spacer(),
 
-            // ✅ Profile
+            
             IconButton(
               tooltip: 'Profile',
               onPressed: () {
@@ -290,7 +290,7 @@ class _MainScreenState extends State<MainScreen> {
               icon: const Icon(Icons.person_outline),
             ),
 
-            // Dashboard
+           
             IconButton(
               tooltip: 'Dashboard',
               onPressed: () {
@@ -302,14 +302,14 @@ class _MainScreenState extends State<MainScreen> {
               icon: const Icon(Icons.bar_chart_rounded),
             ),
 
-            // Refresh
+            
             IconButton(
               tooltip: 'Refresh',
               onPressed: () => setState(() {}),
               icon: const Icon(Icons.refresh),
             ),
 
-            // Sign out
+            
             IconButton(
               tooltip: 'Sign out',
               onPressed: () async => Supabase.instance.client.auth.signOut(),

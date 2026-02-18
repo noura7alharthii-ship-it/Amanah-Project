@@ -7,7 +7,7 @@ import '../theme/app_theme.dart';
 import '../widgets/amanah_logo.dart';
 
 class AddPostScreen extends StatefulWidget {
-  final String initialType; // 'lost' or 'found'
+  final String initialType; 
   const AddPostScreen({super.key, required this.initialType});
 
   @override
@@ -17,12 +17,12 @@ class AddPostScreen extends StatefulWidget {
 class _AddPostScreenState extends State<AddPostScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  late String _type; // lost/found
+  late String _type; 
   final _title = TextEditingController();
   final _description = TextEditingController();
   final _location = TextEditingController();
 
-  // ✅ Contact (Required: email OR phone)
+  
   final _contact = TextEditingController();
 
   bool _loading = false;
@@ -95,7 +95,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
         description: _description.text,
         location: _location.text,
         imageUrl: imageUrl,
-        contactEmail: _contact.text, // ✅ مهم
+        contactEmail: _contact.text, 
       );
 
       if (!mounted) return;
@@ -217,7 +217,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         ),
                         const SizedBox(height: 12),
 
-                        // ✅ Contact required (email or phone)
+                        
                         TextFormField(
                           controller: _contact,
                           keyboardType: TextInputType.emailAddress,
@@ -255,7 +255,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // Image Card
+                
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(16),
@@ -328,7 +328,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
 }
 
 class _TypeToggle extends StatelessWidget {
-  final String value; // lost/found
+  final String value; 
   final ValueChanged<String> onChanged;
 
   const _TypeToggle({required this.value, required this.onChanged});
@@ -390,7 +390,7 @@ class _Seg extends StatelessWidget {
         duration: const Duration(milliseconds: 180),
         padding: const EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
-          // ✅ بدون withValues عشان ما يطلع error
+          
           color: active ? AppColors.navy.withOpacity(0.08) : Colors.transparent,
           borderRadius: BorderRadius.circular(14),
         ),
