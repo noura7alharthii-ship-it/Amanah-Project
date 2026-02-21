@@ -55,7 +55,7 @@ This screen allows users to securely access their accounts.
 ![addpost2](https://github.com/user-attachments/assets/c4b679e6-bf5c-45b8-b41e-639b71a3a2f4)
 
 This screen allows users to submit a new report.  
-The user selects the type (Lost or Found), enters item details, adds contact information, and optionally uploads an image before publishin.
+The user selects the type (Lost or Found), enters item details, adds contact information, and optionally uploads an image before publishing.
 
 ---
 
