@@ -121,6 +121,20 @@ The system includes a dashboard that provides categorized statistics such as tot
 Only the owner of a report has permission to modify or delete it, ensuring proper access control within the system.
 
 ---
+
+
+## Database (Supabase)
+
+The following screenshot shows the structure of the `posts` table used in the application.
+
+
+<img width="600" height="997" alt="Screenshot 2026-02-23 030002" src="https://github.com/user-attachments/assets/6fdbbec0-7fd4-4dfb-a968-5854e6a0705a" />
+
+<img width="600" height="988" alt="Screenshot 2026-02-23 024908" src="https://github.com/user-attachments/assets/8afefeec-e315-4eaa-be2e-6aa1ae4b9954" />
+
+<img width="600" height="1200" alt="Screenshot 2026-02-23 025006" src="https://github.com/user-attachments/assets/8672b275-805f-43ec-a694-e46e2a276697" />
+
+
 ## Author
 
 Developed by Norah Alharthi.
