@@ -132,7 +132,7 @@ The following screenshot shows the structure of the `posts` table used in the ap
 
 <img width="600" height="988" alt="Screenshot 2026-02-23 024908" src="https://github.com/user-attachments/assets/8afefeec-e315-4eaa-be2e-6aa1ae4b9954" />
 
-<img width="600" height="1200" alt="Screenshot 2026-02-23 025006" src="https://github.com/user-attachments/assets/8672b275-805f-43ec-a694-e46e2a276697" />
+<img width="600" height="990" alt="Screenshot 2026-02-23 025006" src="https://github.com/user-attachments/assets/e3394ce3-0348-46b9-b012-1ad815deaf1a" />
 
 
 ## Author
